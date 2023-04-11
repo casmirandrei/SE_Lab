@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.4" />
+    <PackageReference Include="NPOI" Version="2.6.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\LibraryApplicationDataAccess.Abstractions\LibraryApplicationDataAccess.Abstractions.csproj" />
+    <ProjectReference Include="..\LibraryApplicationDataAccess.Model\LibraryApplicationDataAccess.Model.csproj" />
+    <ProjectReference Include="..\Structure_Code\Structure_Code.csproj" />
+  </ItemGroup>
+
+</Project>
