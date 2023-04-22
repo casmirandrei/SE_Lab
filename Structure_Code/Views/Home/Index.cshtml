@@ -2,10 +2,10 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+
+
 <p> Click here to login<a asp-area="" asp-controller="Home" asp-action="Login"> Login </a></p>
 
 <ul>
@@ -19,3 +19,55 @@
         </li>
     }
 </ul>
+<div class="pricing container">
+    <div class="row justify-content-center mt-5">
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card pricing-card">
+                <div class="card-header text-center">
+                    <h4 class="my-0 font-weight-normal">Basic</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$10<small class="text-muted fw-light">/mo</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Access to 10 books per month</li>
+                        <li>Unlimited book reservations</li>
+                        <li>Limited support</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card pricing-card">
+                <div class="card-header text-center">
+                    <h4 class="my-0 font-weight-normal">Pro</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$25<small class="text-muted fw-light">/mo</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Access to 20 books per month</li>
+                        <li>Unlimited book reservations</li>
+                        <li>24/7 support</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-primary">Get started</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6 mb-4">
+            <div class="card pricing-card">
+                <div class="card-header text-center">
+                    <h4 class="my-0 font-weight-normal">Premium</h4>
+                </div>
+                <div class="card-body">
+                    <h1 class="card-title pricing-card-title">$50<small class="text-muted fw-light">/mo</small></h1>
+                    <ul class="list-unstyled mt-3 mb-4">
+                        <li>Unlimited book access</li>
+                        <li>Unlimited book reservations</li>
+                        <li>Priority support</li>
+                    </ul>
+                    <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
