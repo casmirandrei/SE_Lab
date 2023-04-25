@@ -35,8 +35,9 @@ namespace Structure_Code.Controllers
         {
             await HttpContext.ChallengeAsync(GoogleDefaults.AuthenticationScheme, new AuthenticationProperties()
             {
-                RedirectUri= Url.Action("GoogleResponse") 
+                RedirectUri= Url.Action("Index") 
             });
+            
         }
         public async Task<IActionResult> GoogleResponse()
         {
@@ -54,7 +55,7 @@ namespace Structure_Code.Controllers
         public async Task<IActionResult> Logout()
         {
             await HttpContext.SignOutAsync();
-            return RedirectToAction("About");
+            return RedirectToAction("Index");
         }
     }
 }
