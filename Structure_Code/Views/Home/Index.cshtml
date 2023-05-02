@@ -2,20 +2,18 @@
     ViewData["Title"] = "Home Page";
 }
 
-
-
-
-
 <p> Click here to login<a asp-area="" asp-controller="Home" asp-action="Login"> Login </a></p>
 
 <ul>
     @if (Context.User.Identity.IsAuthenticated)
     {
         <li>
-            <a> Hello @User.Identity.Name</a>
+            <a class="welcome-message"> Hello @User.Identity.Name</a>
         </li>
         <li>
-            <a asp-controller="Home" asp-action="Logout">Logout</a>
+            <form asp-controller="Home" asp-action="Logout" method="post">
+                <button type="submit" class="btn btn-link text-decoration-none">Logout</button>
+            </form>
         </li>
     }
 </ul>
