@@ -10,11 +10,11 @@ using Structure_Code.Models;
 
 namespace Structure_Code.Controllers
 {
-    public class BookController : Controller
+    public class BooksController : Controller
     {
-        private readonly Structure_CodeContext _context;
+        private readonly LibraryContext _context;
 
-        public BookController(Structure_CodeContext context)
+        public BooksController(LibraryContext context)
         {
             _context = context;
         }
@@ -27,7 +27,7 @@ namespace Structure_Code.Controllers
             //                  View(await _context.Books.ToListAsync()) :
             //                  Problem("Entity set 'LibraryContext.Books'  is null.");
             ViewData["CurrentFilter"] = SearchString;
-            var book = from b in _context.Book
+            var book = from b in _context.Books
                        select b;
             if (!String.IsNullOrEmpty(SearchString))
             {
@@ -39,12 +39,12 @@ namespace Structure_Code.Controllers
         // GET: Books/Details/5
         public async Task<IActionResult> Details(int? id)
         {
-            if (id == null || _context.Book == null)
+            if (id == null || _context.Books == null)
             {
                 return NotFound();
             }
 
-            var book = await _context.Book
+            var book = await _context.Books 
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (book == null)
             {
@@ -79,12 +79,12 @@ namespace Structure_Code.Controllers
         // GET: Books/Edit/5
         public async Task<IActionResult> Edit(int? id)
         {
-            if (id == null || _context.Book == null)
+            if (id == null || _context.Books == null)
             {
                 return NotFound();
             }
 
-            var book = await _context.Book.FindAsync(id);
+            var book = await _context.Books .FindAsync(id);
             if (book == null)
             {
                 return NotFound();
@@ -130,19 +130,19 @@ namespace Structure_Code.Controllers
         // GET: Books/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            if (id == null || _context.Book == null)
+            if (id == null || _context.Books    == null)
             {
                 return NotFound();
             }
 
-            var book = await _context.Book
+            var Books = await _context.Books
                 .FirstOrDefaultAsync(m => m.Id == id);
-            if (book == null)
+            if (Books == null)
             {
                 return NotFound();
             }
 
-            return View(book);
+            return View(Books);
         }
 
         // POST: Books/Delete/5
@@ -150,14 +150,14 @@ namespace Structure_Code.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            if (_context.Book == null)
+            if (_context.Books == null)
             {
                 return Problem("Entity set 'Structure_CodeContext.Book'  is null.");
             }
-            var book = await _context.Book.FindAsync(id);
+            var book = await _context.Books.FindAsync(id);
             if (book != null)
             {
-                _context.Book.Remove(book);
+                _context.Books.Remove(book);
             }
             
             await _context.SaveChangesAsync();
@@ -166,7 +166,7 @@ namespace Structure_Code.Controllers
 
         private bool BookExists(int id)
         {
-          return (_context.Book?.Any(e => e.Id == id)).GetValueOrDefault();
+          return (_context.Books?.Any(e => e.Id == id)).GetValueOrDefault();
         }
     }
 }
