@@ -141,3 +141,19 @@ main {
     font-weight: bold;
     margin-top: 0.5rem;
 }
+.table tbody td {
+    color: white;
+}
+.navbar .login-link {
+    background-color: #007bff; /* Blue background color */
+    color: #fff; /* White text color */
+    padding: 0.5rem 1rem; /* Add some padding to the button */
+    border-radius: 0.25rem; /* Add some border radius to make it look like a button */
+    transition: all 0.2s; /* Add a transition effect for hover */
+}
+
+    .navbar .login-link:hover {
+        background-color: #0069d9; /* Darker blue background color on hover */
+        color: #fff; /* White text color on hover */
+        text-decoration: none; /* Remove underline on hover */
+    }

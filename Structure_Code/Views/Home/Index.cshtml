@@ -2,7 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
-<p> Click here to login<a asp-area="" asp-controller="Home" asp-action="Login"> Login </a></p>
+@*<p> Click here to login<a asp-area="" asp-controller="Home" asp-action="Login"> Login </a></p>*@
 
 <ul>
     @if (Context.User.Identity.IsAuthenticated)
@@ -31,7 +31,7 @@
                         <li>Unlimited book reservations</li>
                         <li>Limited support</li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up for free</button>
+                    <button type="button" class="btn btn-lg btn-block btn-outline-primary">Sign up</button>
                 </div>
             </div>
         </div>
@@ -63,7 +63,7 @@
                         <li>Unlimited book reservations</li>
                         <li>Priority support</li>
                     </ul>
-                    <button type="button" class="btn btn-lg btn-block btn-primary">Contact us</button>
+                    <button type="button" class="btn btn-lg btn-block btn-primary">Improve your learning</button>
                 </div>
             </div>
         </div>
