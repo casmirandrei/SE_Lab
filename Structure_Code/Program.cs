@@ -6,6 +6,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Structure_Code.Data;
 using Structure_Code.Models;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<LibraryContext>(options =>
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<LibraryContext>(options =>
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDefaultIdentity<IdentityUser>(options => options.SignIn.RequireConfirmedAccount = true).AddRoles<IdentityRole>().AddEntityFrameworkStores<LibraryContext>();
 builder.Services.AddDbContext<LibraryContext>(options =>
 options.UseSqlServer(builder.Configuration.GetConnectionString("LibraryDb")));
 
