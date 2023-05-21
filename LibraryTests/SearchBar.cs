@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace LibraryTests
 {
-    public class UnitTest3
+    public class SearchBar
     {
         private WebApplicationFactory<Book> _factory;
 
-        public UnitTest3(WebApplicationFactory<Book> factory) => _factory = factory;
+        public SearchBar(WebApplicationFactory<Book> factory) => _factory = factory;
         [Fact]
         public async Task SearchBooksByTitle()
         {

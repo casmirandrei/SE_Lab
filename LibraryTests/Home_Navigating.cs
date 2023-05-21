@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace LibraryTests
 {
-    public class UnitTest2 
+    public class Home_Navigating 
     {
         private readonly HttpClient _client;
 

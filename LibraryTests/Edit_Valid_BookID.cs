@@ -10,7 +10,7 @@ using System.Web.Mvc;
 
 namespace LibraryTests
 {
-    public class Edit_Valid_Book
+    public class Edit_Valid_BookID
     {
         [Fact]
         public async Task Edit_WithValidId_ReturnsViewResultWithBook()
